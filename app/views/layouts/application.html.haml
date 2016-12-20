@@ -1,0 +1,18 @@
+!!! 5
+%html(lang="en")
+  %head
+    %title Photogram
+    = csrf_meta_tags
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track':  'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+
+  %body
+    =render 'layouts/navbar'
+
+    %p.notice
+      =notice
+    %p.alert
+      =alert
+    = yield
