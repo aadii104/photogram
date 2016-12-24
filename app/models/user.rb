@@ -1,5 +1,10 @@
 class User < ApplicationRecord
   acts_as_voter
+  validates :user_name, presence: true, length:  { minimum: 4, maximum:8 }
+
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+         
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :destroy
@@ -10,10 +15,9 @@ class User < ApplicationRecord
   has_many :following_relationships, foreign_key: :follower_id, class_name: 'Follow'
   has_many :following, through: :following_relationships, source: :following
 
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
 
-  validates :user_name, presence: true, length:  { minimum: 4, maximum:8 }
+
+
   has_attached_file :avatar, styles: { medium: '150x150#' }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 

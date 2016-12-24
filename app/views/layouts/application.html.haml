@@ -10,9 +10,9 @@
 
   %body
     =render 'layouts/navbar'
-
-    %p.notice
-      =notice
-    %p.alert
-      =alert
-    = yield
+    .container
+      %p.notice
+        =notice
+      %p.alert
+        =alert
+      = yield

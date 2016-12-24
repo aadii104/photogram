@@ -15,7 +15,6 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @posts = @user.posts.order('created_at DESC')
   end
 
   def edit
@@ -38,5 +37,5 @@ class ProfilesController < ApplicationController
     def set_user
       @user = User.find_by(user_name: params[:user_name])
     end
-    
+
 end
