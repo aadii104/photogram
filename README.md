@@ -1,24 +1,23 @@
-# README
+# Photogram
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An instagram clone app with ruby on rails framework.
 
-Things you may want to cover:
+Features included in this version:
 
-* Ruby version
+* Create an secure account.
 
-* System dependencies
+* Assign unique username.
 
-* Configuration
+* create a post with caption.
 
-* Database creation
+* Like or unlike a post.
 
-* Database initialization
+* Comment on post.
 
-* How to run the test suite
+* Ajax call to refresh post comment or like
 
-* Services (job queues, cache servers, search engines, etc.)
+* Add profile pic & bio.
 
-* Deployment instructions
+* Log Out.
 
-* ...
+## Happy photogram.
